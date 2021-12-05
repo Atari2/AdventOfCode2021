@@ -75,7 +75,7 @@ class OceanMap:
         begin_x = vent.begin.x
         begin_y = vent.begin.y
         while begin_x >= vent.end.x:
-            self.map[begin_x][begin_y] += 1
+            self.map[begin_y][begin_x] += 1
             begin_x -= 1
             begin_y -= 1
 
@@ -83,7 +83,7 @@ class OceanMap:
         begin_x = vent.begin.x
         begin_y = vent.begin.y
         while begin_x <= vent.end.x:
-            self.map[begin_x][begin_y] += 1
+            self.map[begin_y][begin_x] += 1
             begin_x += 1
             begin_y -= 1
 
@@ -91,7 +91,7 @@ class OceanMap:
         begin_x = vent.begin.x
         begin_y = vent.begin.y
         while begin_x >= vent.end.x:
-            self.map[begin_x][begin_y] += 1
+            self.map[begin_y][begin_x] += 1
             begin_x -= 1
             begin_y += 1
 
@@ -99,7 +99,7 @@ class OceanMap:
         begin_x = vent.begin.x
         begin_y = vent.begin.y
         while begin_x <= vent.end.x:
-            self.map[begin_x][begin_y] += 1
+            self.map[begin_y][begin_x] += 1
             begin_x += 1
             begin_y += 1
 
@@ -114,4 +114,4 @@ class OceanMap:
 lines = read_from_input()
 vents = [VentLine(line) for line in lines]
 map = OceanMap(vents)
-print(map.map)
+print(map.count_overlaps())
