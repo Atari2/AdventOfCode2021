@@ -5,9 +5,10 @@ def read_from_input():
 crab_pos = [int(x) for x in read_from_input()[0].split(',')]
 
 min_sum = None
-for crab in crab_pos:
+max_pos = max(crab_pos)
+for pos in range(max_pos+1):
     tot_sum = 0
-    for pos in crab_pos:
+    for crab in crab_pos:
         cost = abs(pos - crab)
         # sum([i for i in range(1, n + 1)]) -> n * (n + 1) / 2
         tot_sum += (cost * (cost + 1)) // 2
