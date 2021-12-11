@@ -88,8 +88,8 @@ while True:
     for row in input_mat:
         for o in row:
             all_flashed += 1 if o.reset_flashed_value() else 0
+    if cycle == 100:
+        print(tot_flashes)
     if all_flashed == 100:
         print("all flashed", cycle)
         exit(0)
-
-print(tot_flashes)
