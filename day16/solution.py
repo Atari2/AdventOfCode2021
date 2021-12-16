@@ -9,17 +9,6 @@ def read_from_input():
 
 tot_version = 0
 
-def sum_packets(packets: list[Packet]):
-    pass
-
-def sum_packets(packets: list[Packet]):
-    pass
-
-def sum_packets(packets: list[Packet]):
-    pass
-
-
-
 class PacketType(IntEnum):
     LITERAL = 4
     OPERATOR_SUM = 0
